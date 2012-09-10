@@ -1,14 +1,13 @@
 #!/bin/sh
 
+# checks whether a site's given in stdin; if not, it asks for the site
 if ! [ -e $1 ]; then
-    echo "Checking site ..."
     site="$1"
+    echo "Checking $site ..."
 else
     echo "Site to check: \c"
     read site
 fi
-
-# gets the site to check
 
 # the time in seconds to wait between each check
 interval="300"
